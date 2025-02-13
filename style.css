@@ -24,6 +24,7 @@ body {
   gap: 2rem;
 }
 
+/* ABOUT ME BOX */
 .about-box {
   flex: 1;
 }
@@ -38,7 +39,7 @@ body {
   margin-bottom: 1rem;
 }
 
-/* RIGHT PHOTO COLUMN */
+/* PHOTO COLUMN ON THE RIGHT */
 .photo-col {
   display: flex;
   flex-direction: column;
@@ -46,37 +47,35 @@ body {
   justify-content: center;
   flex: 1;
   min-width: 250px;
-  margin-top: 5rem; /* shift photo downward if you want extra space */
+  margin-top: 5rem; /* big top margin for desktops, can override on mobile */
 }
 
-/* Make the image responsive */
+/* RESPONSIVE IMAGE */
 .profile-pic {
-  /* Will never exceed its container’s width */
-  max-width: 100%;
-  height: auto;
+  max-width: 100%; /* scale down if needed */
+  height: auto;    /* maintain aspect ratio */
   object-fit: cover;
-  border-radius: 8px; /* optional */
+  border-radius: 8px; /* optional round corners */
 }
 
-/* BOTTOM SECTION: TWO COLUMNS (LEFT: Publications/Blogs, RIGHT: X/Email/GitHub) */
+/* BOTTOM SECTION: PUBLICATIONS/BLOGS (LEFT) & X/EMAIL/GITHUB (RIGHT) */
 .links-section {
   display: flex;
-  flex-wrap: wrap; /* so it doesn't overflow on very small screens */
+  flex-wrap: wrap;
   justify-content: space-between;
   max-width: 1200px;
   margin: 2rem auto;
   padding: 0 2rem;
   gap: 2rem;
 }
-
 .links-left {
   flex: 1;
 }
 .links-right {
-  flex: 0.4; /* or 1, if you want them equal widths */
+  flex: 0.4; /* or 1 for equal widths if you prefer */
 }
 
-/* Headings & links in the bottom section */
+/* HEADINGS & LINKS */
 .links-section h2 {
   font-size: 1.6rem;
   font-weight: normal;
@@ -91,22 +90,25 @@ body {
   text-decoration: underline;
 }
 
-/* The “underscore” lines for separation */
+/* UNDERSCORE LINES */
 .line {
   margin: -0.5rem 0 1rem;
   color: #ccc;
   font-size: 1.2rem;
 }
 
-/* RESPONSIVE LAYOUT FOR SMALLER SCREENS */
+/* RESPONSIVE LAYOUT FOR SMALL SCREENS */
 @media (max-width: 600px) {
-  /* Stack about-box and photo vertically */
+  /* Stack about-box & photo-col vertically instead of side-by-side */
   .top-section {
-    display: block; /* instead of flex */
+    display: block; 
   }
-  .about-box,
+  /* Remove or reduce big margin on mobile so the photo isn't too far down */
   .photo-col {
-    margin-bottom: 1rem;
-    margin-top: 0; /* remove big top margin on mobile if desired */
+    margin-top: 1rem;
+  }
+  /* Optional: center or left-align text if you prefer */
+  .about-box p {
+    text-align: left;
   }
 }
