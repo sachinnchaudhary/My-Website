@@ -12,10 +12,10 @@ body {
   line-height: 1.6;
 }
 
-/* TOP SECTION: ABOUT ME (LEFT) + PHOTO (RIGHT) */
+/* TOP SECTION: ABOUT ME */
 .top-section {
   display: flex;
-  flex-wrap: wrap;          /* wrap on smaller screens if needed */
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
   max-width: 1200px;
@@ -24,7 +24,6 @@ body {
   gap: 2rem;
 }
 
-/* ABOUT ME BOX */
 .about-box {
   flex: 1;
 }
@@ -39,26 +38,15 @@ body {
   margin-bottom: 1rem;
 }
 
-/* PHOTO COLUMN ON THE RIGHT */
-.photo-col {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex: 1;
-  min-width: 250px;
-  margin-top: 5rem; /* big top margin for desktops, can override on mobile */
+/* For the horizontal rule in About Me */
+.line {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 1.5rem 0;
+  width: 100%;
 }
 
-/* RESPONSIVE IMAGE */
-.profile-pic {
-  max-width: 100%; /* scale down if needed */
-  height: auto;    /* maintain aspect ratio */
-  object-fit: cover;
-  border-radius: 8px; /* optional round corners */
-}
-
-/* BOTTOM SECTION: PUBLICATIONS/BLOGS (LEFT) & X/EMAIL/GITHUB (RIGHT) */
+/* BOTTOM SECTION: Publications/Blogs (Left) & X/Email/GitHub (Right) */
 .links-section {
   display: flex;
   flex-wrap: wrap;
@@ -68,6 +56,7 @@ body {
   padding: 0 2rem;
   gap: 2rem;
 }
+
 .links-left {
   flex: 1;
 }
@@ -90,25 +79,21 @@ body {
   text-decoration: underline;
 }
 
-/* UNDERSCORE LINES */
-.line {
-  margin: -0.5rem 0 1rem;
+/* Underscores for Publications, Blogs, Bookshelf */
+.underscores {
+  margin: 0; /* or add spacing if you want */
+  font-size: 1.2rem; /* optional if you want them bigger/smaller */
   color: #ccc;
-  font-size: 1.2rem;
+  /* no border or extra styling—just raw text as typed */
 }
 
-/* RESPONSIVE LAYOUT FOR SMALL SCREENS */
+/* Mobile responsiveness */
 @media (max-width: 600px) {
-  /* Stack about-box & photo-col vertically instead of side-by-side */
   .top-section {
-    display: block; 
+    display: block;
   }
-  /* Remove or reduce big margin on mobile so the photo isn't too far down */
-  .photo-col {
-    margin-top: 1rem;
-  }
-  /* Optional: center or left-align text if you prefer */
-  .about-box p {
-    text-align: left;
+  .about-box {
+    margin-bottom: 1rem;
   }
 }
+
