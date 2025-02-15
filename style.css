@@ -38,6 +38,19 @@ body {
   margin-bottom: 1rem;
 }
 
+/*
+  Force any links inside .about-box to be white (#ccc)
+  so "bookshelf" link doesn't appear in a default color.
+*/
+.about-box a,
+.about-box a:visited {
+  color: #ccc;
+  text-decoration: none;
+}
+.about-box a:hover {
+  text-decoration: underline;
+}
+
 /* For the horizontal rule in About Me */
 .line {
   border: none;
@@ -56,7 +69,6 @@ body {
   padding: 0 2rem;
   gap: 2rem;
 }
-
 .links-left {
   flex: 1;
 }
@@ -81,10 +93,9 @@ body {
 
 /* Underscores for Publications, Blogs, Bookshelf */
 .underscores {
-  margin: 0; /* or add spacing if you want */
-  font-size: 1.2rem; /* optional if you want them bigger/smaller */
+  margin: 0;
+  font-size: 1.2rem;
   color: #ccc;
-  /* no border or extra styling—just raw text as typed */
 }
 
 /* Mobile responsiveness */
