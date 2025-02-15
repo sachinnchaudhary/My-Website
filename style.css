@@ -108,3 +108,10 @@ body {
   }
 }
 
+/* Force an underline for the "bookshelf" link, overriding any global 'text-decoration: none' */
+.bookshelf-underline,
+.bookshelf-underline:visited {
+  color: #ccc;
+  text-decoration: underline !important;
+  /* Using !important to beat any previous 'text-decoration: none' rules */
+}
