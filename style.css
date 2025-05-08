@@ -115,3 +115,7 @@ body {
   text-decoration: underline !important;
   /* Using !important to beat any previous 'text-decoration: none' rules */
 }
+
+.about-box p:nth-of-type(2) {
+  font-size: 1.6rem; /* Adjust this size as desired */
+}
